@@ -1,0 +1,13 @@
+from sklearn import datasets
+iris = datasets.load_iris()
+mylist=[]
+X = iris.data[:, :4]
+
+for i in X:
+    a=(4.21-i[0])**2
+    b=(3.02-i[1])**2
+    c=(1.09-i[2])**2
+    d=(0.1-i[3])**2
+    z=float(a+b+c+d)**0.5
+    mylist.append(z)
+mylist
